@@ -333,7 +333,7 @@ def page_input():
  
     st.markdown("<br>", unsafe_allow_html=True)
 
-    col1, col2 = st.columns(2)
+    col1, spacer, col2 = st.columns([1,0.08,1])
  
     with col1:
         st.markdown("#### ⚖️ Massa Standar Baku")
@@ -369,6 +369,9 @@ def page_input():
             st.info(f"BE = **{BE_input:.4f} mg/mgrek**")
         else:
             BE_input = None
+         
+     with spacer:
+      st.markdown("<div class='divider-vertical'></div>", unsafe_allow_html=True)
  
     with col2:
         st.markdown(f"#### ⚗️ Volume Titran ({titran})")
