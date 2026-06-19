@@ -180,70 +180,73 @@ def show_progress(current_page):
 # =========================================
 def page_beranda():
     show_progress(0)
- 
-    st.markdown(
-        """
-        <h1 style='text-align: center;'>
-        🧪 Kalkulator Standardisasi Larutan
-        </h1>
-        """,
-        unsafe_allow_html=True
-    )
- 
-    st.markdown(
-        """
-        <p style='text-align: center; font-size:18px; color:#475569;'>
-        Kalkulator untuk menghitung konsentrasi Normalitas/Molaritas
-        beserta %RPD hasil standardisasi larutan.
-        </p>
-        """,
-        unsafe_allow_html=True
-    )
- 
-    st.markdown("<br>", unsafe_allow_html=True)
- 
-    col_a, col_b, col_c = st.columns(3)
- 
-    with col_a:
-        st.markdown("""
-        <div style='background:#FFFFFF; border:1px solid #E2E8F0;
-                    border-radius:15px; padding:20px; text-align:center;'>
-            <h2>⚗️</h2>
-            <h4>5 Metode</h4>
-            <p style='color:#64748B;'>Alkalimetri, Asidimetri,
-            Permanganometri, Iodometri, Kompleksometri</p>
-        </div>
-        """, unsafe_allow_html=True)
- 
-    with col_b:
-        st.markdown("""
-        <div style='background:#FFFFFF; border:1px solid #E2E8F0;
-                    border-radius:15px; padding:20px; text-align:center;'>
-            <h2>🧮</h2>
-            <h4>Otomatis</h4>
-            <p style='color:#64748B;'>Database BM & valensi
-            terisi otomatis sesuai metode yang dipilih</p>
-        </div>
-        """, unsafe_allow_html=True)
- 
-    with col_c:
-        st.markdown("""
-        <div style='background:#FFFFFF; border:1px solid #E2E8F0;
-                    border-radius:15px; padding:20px; text-align:center;'>
-            <h2>📋</h2>
-            <h4>Transparan</h4>
-            <p style='color:#64748B;'>Langkah perhitungan
-            ditampilkan lengkap dengan rumus dan nilai</p>
-        </div>
-        """, unsafe_allow_html=True)
- 
-    st.markdown("<br><br>", unsafe_allow_html=True)
- 
-    col_btn1, col_btn2, col_btn3 = st.columns([1, 2, 1])
+
+    st.markdown("""
+    <h1 style='text-align:center; margin-bottom:10px;'>
+    🧪 Kalkulator Standardisasi Larutan
+    </h1>
+    """, unsafe_allow_html=True)
+
+    col_btn1, col_btn2, col_btn3 = st.columns([1,2,1])
+
     with col_btn2:
-        if st.button("🚀 Mulai Hitung →"):
+        if st.button("🧪 Mulai Hitung"):
             st.session_state.page = 1
             st.rerun()
+
+    st.markdown("""
+    <p style='text-align:center; font-size:18px; color:#475569; margin-top:20px;'>
+    Kalkulator untuk menghitung konsentrasi Normalitas/Molaritas beserta %RPD hasil standardisasi larutan.
+    </p>
+    """, unsafe_allow_html=True)
+
+    st.markdown("<br>", unsafe_allow_html=True)
+
+    col_a, col_b, col_c = st.columns(3)
+
+    with col_a:
+        st.markdown("""
+        <div class='card-box'>
+            <h2 style='text-align:center;'>⚗️</h2>
+            <h4 style='text-align:center;'>5 Metode</h4>
+            <p style='text-align:center; color:#64748B;'>
+            Alkalimetri, Asidimetri, Permanganometri, Iodometri, Kompleksometri
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_b:
+        st.markdown("""
+        <div class='card-box'>
+            <h2 style='text-align:center;'>🧮</h2>
+            <h4 style='text-align:center;'>Otomatis</h4>
+            <p style='text-align:center; color:#64748B;'>
+            Database BM & valensi otomatis sesuai metode
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    with col_c:
+        st.markdown("""
+        <div class='card-box'>
+            <h2 style='text-align:center;'>📋</h2>
+            <h4 style='text-align:center;'>Transparan</h4>
+            <p style='text-align:center; color:#64748B;'>
+            Menampilkan langkah perhitungan lengkap
+            </p>
+        </div>
+        """, unsafe_allow_html=True)
+
+    st.markdown("""
+    <div class='creator-footer'>
+    <b>Kreator:</b><br><br>
+    Adila Candra Wijayanti (2560554)<br>
+    Dafina Khaerunnisa (2560603)<br>
+    Mohammad Raihan Fitrananda (2560673)<br>
+    Pegi Sepyan Rahmadani (2560736)<br>
+    Talitha Putri Hutomo (2560794)
+    </div>
+    """, unsafe_allow_html=True)
  
 # =========================================
 # PAGE 1: INPUT DATA
