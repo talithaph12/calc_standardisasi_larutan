@@ -121,6 +121,51 @@ div[data-testid="stMetric"] {
 .step-line.done {
     background-color: #14B8A6;
 }
+
+/* Step turun sedikit */
+.step-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin-top: 25px;
+    margin-bottom: 2rem;
+}
+
+/* Tombol besar */
+.stButton>button {
+    background-color: #14B8A6;
+    color: white;
+    border-radius: 14px;
+    border: none;
+    height: 60px;
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* Card */
+.card-box {
+    background: white;
+    border: 1px solid #E2E8F0;
+    border-radius: 18px;
+    padding: 22px;
+    box-shadow: 0 6px 16px rgba(0,0,0,0.05);
+}
+
+.divider-vertical {
+    border-left: 2px solid #E2E8F0;
+    height: 600px;
+    margin: auto;
+}
+
+.creator-footer {
+    text-align: center;
+    color: #64748B;
+    font-size: 14px;
+    margin-top: 40px;
+}
+
  
 </style>
 """, unsafe_allow_html=True)
