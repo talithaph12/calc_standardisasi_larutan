@@ -283,7 +283,7 @@ def page_beranda():
 
     st.markdown("""
     <div class='creator-footer'>
-    <b>Kreator:</b><br><br>
+    <b>✍🏻Kreator:</b><br><br>
     Adila Candra Wijayanti (2560554)<br>
     Dafina Khaerunnisa (2560603)<br>
     Mohammad Raihan Fitrananda (2560673)<br>
