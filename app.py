@@ -239,7 +239,7 @@ def page_beranda():
 
     st.markdown("<br>", unsafe_allow_html=True)
  
-    col_left, col_center, col_right = st.columns([2,3,2])
+    col_left, col_center, col_right = st.columns([1.5,4,1.5])
 
     with col_center:
         if st.button("🧪 Mulai Hitung", use_container_width=True):
