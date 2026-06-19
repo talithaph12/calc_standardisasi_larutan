@@ -426,7 +426,7 @@ def page_input():
             st.rerun()
  
     with col_next:
-        if st.button("Hitung →"):
+        if st.button("📲Hitung →"):
             if vol1 == 0 or vol2 == 0:
                 st.error("❌ Volume titran tidak boleh 0!")
             else:
