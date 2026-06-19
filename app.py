@@ -39,6 +39,18 @@ h1, h2, h3 {
     font-size: 18px;
     font-weight: bold;
 }
+
+/* Tombol Kembali (page input) */
+div.stButton:nth-of-type(2) > button {
+    background-color: #A7F3D0 !important;
+    color: #065F46 !important;
+}
+
+/* Tombol Edit Input (page hasil) */
+div.stButton:nth-of-type(4) > button {
+    background-color: #A7F3D0 !important;
+    color: #065F46 !important;
+}
  
 .stButton>button:hover {
     background-color: #0D9488;
