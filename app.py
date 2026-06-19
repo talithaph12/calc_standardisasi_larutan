@@ -138,7 +138,7 @@ div[data-testid="stMetric"] {
     border-radius: 28px;
     border: none;
     height: 60px;
-    width: 200%;
+    width: 100%;
     font-size: 80px;
     font-weight: bold;
 }
