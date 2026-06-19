@@ -370,8 +370,9 @@ def page_input():
         else:
             BE_input = None
          
-     with spacer:
-      st.markdown("<div class='divider-vertical'></div>", unsafe_allow_html=True)
+    with spacer:
+        st.markdown("<div class='divider-vertical'></div>", unsafe_allow_html=True)
+
  
     with col2:
         st.markdown(f"#### ⚗️ Volume Titran ({titran})")
