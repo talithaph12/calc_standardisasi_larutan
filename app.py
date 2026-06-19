@@ -139,7 +139,7 @@ div[data-testid="stMetric"] {
     border: none;
     height: 60px;
     width: 200%;
-    font-size: 160px;
+    font-size: 80px;
     font-weight: bold;
 }
 
