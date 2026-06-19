@@ -333,87 +333,36 @@ def page_input():
  
     st.markdown("<br>", unsafe_allow_html=True)
 
- col1, spacer, col2 = st.columns([1,0.08,1])
+    col1, spacer, col2 = st.columns([1,0.08,1])
 
-with spacer:
-    st.markdown("<div class='divider-vertical'></div>", unsafe_allow_html=True)
- 
     with col1:
-        st.markdown("#### ⚖️ Massa Standar Baku")
- 
-        massa = st.number_input(
-            "Massa standar baku",
-            value=float(st.session_state.hasil.get("massa", default_massa))
-        )
- 
-        satuan = st.selectbox(
-            "Satuan Massa",
-            ["mg", "g"],
-            index=["mg", "g"].index(st.session_state.hasil.get("satuan", "mg"))
-        )
- 
-        massa_mg = massa * 1000 if satuan == "g" else massa
-        st.info(f"Hasil konversi massa = **{massa_mg:.2f} mg**")
- 
-        st.markdown("#### 🧬 Data Kimia (Otomatis)")
- 
-        BM_input = st.number_input(
-            "BM (g/mol)",
-            value=float(st.session_state.hasil.get("BM_input", BM))
-        )
- 
-        valensi_input = st.number_input(
-            "Valensi",
-            value=float(st.session_state.hasil.get("valensi_input", valensi))
-        )
- 
-        if metode != "Kompleksometri":
-            BE_input = BM_input / valensi_input
-            st.info(f"BE = **{BE_input:.4f} mg/mgrek**")
-        else:
-            BE_input = None
- 
+        massa = st.number_input("Massa standar baku", value=float(default_massa))
+        satuan = st.selectbox("Satuan", ["mg","g"])
+        massa_mg = massa*1000 if satuan=="g" else massa
+
+        BM = database[baku]["BM"]
+        valensi = database[baku]["valensi"]
+
+        st.info(f"BM = {BM}")
+        st.info(f"Valensi = {valensi}")
+
+    with spacer:
+        st.markdown("<div class='divider-vertical'></div>", unsafe_allow_html=True)
+
     with col2:
-        st.markdown(f"#### ⚗️ Volume Titran ({titran})")
- 
-        vol1 = st.number_input(
-            f"Volume {titran} pertama (mL)",
-            min_value=0.0,
-            value=float(st.session_state.hasil.get("vol1", 0.0))
-        )
- 
-        vol2 = st.number_input(
-            f"Volume {titran} kedua (mL)",
-            min_value=0.0,
-            value=float(st.session_state.hasil.get("vol2", 0.0))
-        )
- 
-        st.markdown("#### 🧪 Pengenceran")
- 
-        pengenceran = st.radio(
-            "Apakah menggunakan pengenceran?",
-            ["Ya", "Tidak"],
-            index=["Ya", "Tidak"].index(
-                st.session_state.hasil.get("pengenceran", "Ya")
-            )
-        )
- 
+        vol1 = st.number_input("Volume titran pertama", min_value=0.0)
+        vol2 = st.number_input("Volume titran kedua", min_value=0.0)
+
+        pengenceran = st.radio("Pengenceran?", ["Ya","Tidak"])
+
         if pengenceran == "Ya":
-            volume_total = st.number_input(
-                "Volume total pengenceran (mL)",
-                value=float(st.session_state.hasil.get("volume_total", 100.0))
-            )
-            volume_pipet = st.number_input(
-                "Volume yang dipipet untuk titrasi (mL)",
-                value=float(st.session_state.hasil.get("volume_pipet", 25.0))
-            )
-            FP = volume_total / volume_pipet
+            total = st.number_input("Volume total", value=100.0)
+            pipet = st.number_input("Volume pipet", value=25.0)
+            FP = total/pipet
         else:
-            volume_total = None
-            volume_pipet = None
-            FP = 1.0
- 
-        st.success(f"Faktor Pengali (FP) = **{FP:.2f}**")
+            FP = 1
+
+        st.success(f"FP = {FP:.2f}")
  
     st.markdown("<br>", unsafe_allow_html=True)
  
