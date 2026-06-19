@@ -35,8 +35,8 @@ h1, h2, h3 {
     border-radius: 12px;
     border: none;
     height: 50px;
-    width: 100%;
-    font-size: 18px;
+    width: 200%;
+    font-size: 36px;
     font-weight: bold;
 }
  
