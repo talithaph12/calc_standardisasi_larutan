@@ -239,13 +239,12 @@ def page_beranda():
 
     st.markdown("<br>", unsafe_allow_html=True)
  
-    col_btn1, col_btn2, col_btn3 = st.columns([1,2,1])
+    col_left, col_center, col_right = st.columns([2,3,2])
 
-    with col_btn2:
-        if st.button("🧪 Mulai Hitung"):
+    with col_center:
+        if st.button("🧪 Mulai Hitung", use_container_width=True):
             st.session_state.page = 1
             st.rerun()
-
 
     col_a, col_b, col_c = st.columns(3)
 
