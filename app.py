@@ -421,7 +421,7 @@ def page_input():
     col_back, col_space, col_next = st.columns([1, 2, 1])
  
     with col_back:
-        if st.button("← Kembali"):
+        if st.button("← Kembali🏠"):
             st.session_state.page = 0
             st.rerun()
  
