@@ -122,7 +122,6 @@ div[data-testid="stMetric"] {
     background-color: #14B8A6;
 }
 
-/* Step turun sedikit */
 .step-container {
     display: flex;
     justify-content: center;
@@ -136,11 +135,11 @@ div[data-testid="stMetric"] {
 .stButton>button {
     background-color: #14B8A6;
     color: white;
-    border-radius: 14px;
+    border-radius: 28px;
     border: none;
     height: 60px;
-    width: 150%;
-    font-size: 40px;
+    width: 200%;
+    font-size: 80px;
     font-weight: bold;
 }
 
