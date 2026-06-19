@@ -4,7 +4,7 @@ import streamlit as st
 # CONFIG PAGE
 # =========================================
 st.set_page_config(
-    page_title="Calculator Standardisasi Larutan",
+    page_title="Kalkulator Standardisasi Larutan",
     page_icon="🧪",
     layout="wide"
 )
@@ -184,7 +184,7 @@ def page_beranda():
     st.markdown(
         """
         <h1 style='text-align: center;'>
-        🧪 Calculator Standardisasi Larutan
+        🧪 Kalkulator Standardisasi Larutan
         </h1>
         """,
         unsafe_allow_html=True
