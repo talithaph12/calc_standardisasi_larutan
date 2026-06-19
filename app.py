@@ -232,13 +232,6 @@ def page_beranda():
     </h1>
     """, unsafe_allow_html=True)
 
-    col_btn1, col_btn2, col_btn3 = st.columns([1,2,1])
-
-    with col_btn2:
-        if st.button("🧪 Mulai Hitung"):
-            st.session_state.page = 1
-            st.rerun()
-
     st.markdown("""
     <p style='text-align:center; font-size:18px; color:#475569; margin-top:20px;'>
     Kalkulator untuk menghitung konsentrasi Normalitas/Molaritas beserta %RPD hasil standardisasi larutan.
@@ -246,6 +239,13 @@ def page_beranda():
     """, unsafe_allow_html=True)
 
     st.markdown("<br>", unsafe_allow_html=True)
+ 
+ col_btn1, col_btn2, col_btn3 = st.columns([1,2,1])
+
+    with col_btn2:
+        if st.button("🧪 Mulai Hitung"):
+            st.session_state.page = 1
+            st.rerun()
 
     col_a, col_b, col_c = st.columns(3)
 
